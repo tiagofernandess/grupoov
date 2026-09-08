@@ -54,19 +54,18 @@ body {
 }
 
 .download-card {
-  padding: 28px;
+  padding: 16px 20px;
   display: grid;
-  gap: 20px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 16px;
+  align-items: center;
 }
 
 .app-info {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 18px 22px;
-  border: 1px solid #e2e8f0;
-  border-radius: 16px;
-  background: #f8fafc;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
 }
 
 .label {
@@ -83,8 +82,7 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  padding: 16px 18px;
+  padding: 11px 16px;
   border-radius: 16px;
   text-decoration: none;
   font-size: 1rem;
@@ -98,4 +96,15 @@ body {
   transform: translateY(-1px);
   background: #15803d;
   box-shadow: 0 12px 28px rgba(22, 163, 74, 0.22);
+}
+
+@media (max-width: 420px) {
+  .download-card {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .download-button {
+    width: 100%;
+  }
 }
